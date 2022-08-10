@@ -1,0 +1,112 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+/* сброс отступов */
+a,button {
+	all:unset
+}
+/* сброс стилей по умолчанию */
+nav div:hover {
+	background: rgba(255,255,255,.3);
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter:blur(5px);
+	box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+/* при наведении на ссылки меню появляется цветовая подложка с тенью и размытием заднего фона*/
+a,button:hover {
+	cursor: pointer;
+}
+/* при наведении на ссылки появляется курсор-указка */
+nav {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content:space-around;
+	font-size: 3em;
+	font-weight: 700;
+}
+/* располагает меню горизонтально, выравнивает, переносит, задает размер и жирность шрифта */
+body {
+	background: rgb(229, 227, 227) url(../images/background.jpg); /* выбираем фоновый цвет и фоновый рисунок*/
+	background-attachment: fixed; /* фиксируем фон */
+	background-size: cover; /* растягиваем изображение по экрану */
+	font-family: 'Amatic SC', cursive; /* указываем шрифт страницы */
+	min-height: 100vh;
+	display: grid;
+	grid-template-areas:
+	"header"
+	"nav"
+	"main"
+	"footer";
+}
+/* выбираем задний фон, задаем высоту относительно области просмотра, стиль сетка, делаем разметку */
+header {
+	font-weight: 700;
+	grid-area: header;
+	display: flex;
+	flex-flow: row no-wrap;
+	justify-items: flex-start;
+	align-items: center;
+	padding-right: 5em;
+	padding-left: 5em;
+	margin: 1em 0em;
+}
+/* шапка сайта - прописываем имя в разметке, делаем флексом, выравниваем содержимое, отступы */
+.menu {
+	grid-area: nav;
+}
+/* прописываем имя в разметке */
+main {
+	grid-area: main;
+	padding: 0em 5em;
+}
+/* имя в разметке, отступы */
+footer {
+	grid-area: footer;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 0em 5em;
+	margin: 10px 0px;
+}
+/* задаем подвалу имя в разметке, делаем флексом, выравниваем содержимое */
+nav div {
+	display: flex;
+	flex-direction: column;
+	justify-content:center;
+	align-items:center; 
+}
+/* выравниваем див с рисунком и ссылкой по вертикали, центрируем */
+button {
+	align-self: center;
+	position: relative;
+	margin-left: auto;
+	border: 0;
+  background: #b6adaf;
+  color: #332d2b;
+  padding: 8px 16px;
+	font-family: Helvetica, Arial, sans-serif;
+  font-size: 1em;
+	font-weight: 700;
+}
+button:hover {
+	background: #706b6c;	
+	box-shadow: 0px 0px 8px -2px #716A7A;
+	color:white
+}
+button:focus {
+	background: #746e70;	
+	box-shadow: inset 10px 10px 4px -4px rgba(9, 9, 10, 0.34);
+	color:rgb(228, 217, 217)
+}
+/* стилизация кнопки */
+h1,h2 {
+	font-size: 2em;	
+}
+p {
+	font-size: 1.2em;
+	font-family: 'Roboto', Helvetica, Arial, sans-serif;
+	text-align: justify;
+}
+/* стилизация текста */
