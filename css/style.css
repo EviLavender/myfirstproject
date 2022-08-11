@@ -95,10 +95,11 @@ button:hover {
 	box-shadow: 0px 0px 8px -2px #716A7A;
 	color:white
 }
-button:focus {
+button:active{
 	background: #746e70;	
 	box-shadow: inset 10px 10px 4px -4px rgba(9, 9, 10, 0.34);
-	color:rgb(228, 217, 217)
+	color:rgb(228, 217, 217);
+	top: 6px;
 }
 /* стилизация кнопки */
 h1,h2 {
